@@ -8,7 +8,7 @@
     "lint-fix": "eslint src/** src/**/** --fix; exit 0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack-dev-server",
-    "start": "npm run build && webpack-dev-server --open"
+    "start": "webpack-dev-server --open"
   },
   "author": "Tracy Reith",
   "license": "ISC",
@@ -30,6 +30,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.0.0",
-    "styled-jsx": "^3.2.1"
+    "styled-jsx": "^3.2.1",
+    "uuid": "^3.2.1"
   }
 }
