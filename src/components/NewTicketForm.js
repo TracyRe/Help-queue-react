@@ -1,7 +1,6 @@
-import React from 'react'
-import  PropTypes from 'prop-types'
-import { v4 } from 'uuid'
-import Moment from 'moment'
+import React from 'react';
+import  PropTypes from 'prop-types';
+import Moment from 'moment';
 
 
 function NewTicketForm(props){
@@ -11,8 +10,7 @@ function NewTicketForm(props){
 
   function handleNewTicketFormSubmission(event) {
     event.preventDefault()
-    props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value, id: v4(), timeOpen: new Moment()})
-    alert('Issue submitted.')
+    props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value, timeOpen: new Moment()})
     _names.value = ''
     _location.value = ''
     _issue.value = ''
@@ -71,11 +69,11 @@ function NewTicketForm(props){
         <button type = 'submit'>Help!</button>
       </form>
     </div>
-  )
+  );
 }
 
 NewTicketForm.propTypes = {
   onNewTicketCreation: PropTypes.func
 }
 
-export default NewTicketForm
+export default NewTicketForm;
