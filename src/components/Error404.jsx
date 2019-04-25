@@ -10,9 +10,9 @@ function Error404(props) {
 
 
   return (
-    <div style={Error404}>
+    <div style = {Error404}>
       <h3>Page {props.location.pathname} not found</h3>
-      <p><Link to='/'>Back to the start</Link></p>
+      <p><Link to = '/'>Back to the start</Link></p>
     </div>
   )
 }
