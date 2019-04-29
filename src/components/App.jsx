@@ -15,7 +15,7 @@ class App extends React.Component {
     this.state = {
       masterTicketList: {},
       selectedTicket: null
-    }
+    };
 
     this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this);
 
@@ -26,7 +26,7 @@ class App extends React.Component {
     var newTicketId = v4();
     var newMasterTicketList = Object.assign({}, this.state.masterTicketList,
       {
-      [newTicketId]: newTicket
+        [newTicketId]: newTicket
       });
     newMasterTicketList[newTicketId].formattedWaitTime = newMasterTicketList[newTicketId].timeOpen.fromNow(true);
     this.setState({masterTicketList: newMasterTicketList});
@@ -40,7 +40,7 @@ class App extends React.Component {
     this.waitTimeUpdateTimer = setInterval(()=>
       this.updateTicketElapsedWaitTime(),
     60000
-  );
+    );
   }
 
   updateTicketElapsedWaitTime() {
@@ -63,13 +63,13 @@ class App extends React.Component {
           <Route exact path = '/' render = {()=><TicketList ticketList = {this.state.masterTicketList} />} />
           <Route path = '/newticket' render = {()=><NewTicketControl onNewTicketCreation = {this.handleAddingNewTicketToList} />} />
           <Route path = '/admin'  render = {(props)=><Admin ticketList = {this.state.masterTicketList} currentRouterPath = {props.location.pathname}
-          onTicketSelection={this.handleChangingSelectedticket}
-          selectedTicket={this.state.selectedTicket} />}/>
+            onTicketSelection = {this.handleChangingSelectedticket}
+            selectedTicket = {this.state.selectedTicket} />}/>
           <Route component = {Error404}/>
         </Switch>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

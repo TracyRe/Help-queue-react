@@ -19,16 +19,16 @@ function TicketList(props) {
           onTicketSelection = {props.onTicketSelection}
           key = {ticketId}
           ticketId = {ticketId}
-          />;
-        })}
+        />;
+      })}
     </div>
-  )
+  );
 }
 
 TicketList.propTypes = {
   ticketList: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onTicketSelection: PropTypes.func
-}
+};
 
-export default TicketList
+export default TicketList;

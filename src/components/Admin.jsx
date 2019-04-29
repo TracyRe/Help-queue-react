@@ -6,7 +6,7 @@ import TicketDetail from './TicketDetail';
 function Admin(props) {
   let optionalSelectedTicketContent = null;
   if (props.selectedTicket != null) {
-    optionalSelectedTicketContent = <TicketDetail selectedTicket={props.ticketList[props.selectedTicket]}/>;
+    optionalSelectedTicketContent = <TicketDetail selectedTicket = {props.ticketList[props.selectedTicket]}/>;
   }
 
   return (
@@ -14,12 +14,12 @@ function Admin(props) {
       <h2>Admin</h2>
       {optionalSelectedTicketContent}
       <TicketList
-        ticketList={props.ticketList}
-        currentRouterPath={props.currentRouterPath}
-        onTicketSelection={props.onTicketSelection}
-        />
+        ticketList = {props.ticketList}
+        currentRouterPath = {props.currentRouterPath}
+        onTicketSelection = {props.onTicketSelection}
+      />
     </div>
-  )
+  );
 }
 
 Admin.propTypes = {
