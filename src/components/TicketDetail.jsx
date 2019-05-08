@@ -5,7 +5,7 @@ function TicketDetail(props) {
   return(
     <div>
       <h2>{props.selectedTicket.names} - {props.selectedTicket.location}</h2>
-      <p><em>Submitted {props.selectedTicket.formattedWaitTime} ago</em></p>
+      <p><em>Submitted {props.selectedTicket.formattedWaitTime}</em></p>
       <h3>{props.selectedTicket.issue}</h3>
     </div>
   );

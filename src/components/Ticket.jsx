@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import c from './../constants';
+import constants from './../../src/constants';
+
+const { c } = constants;
 
 function Ticket(props) {
 
@@ -23,7 +25,7 @@ function Ticket(props) {
         }
         `}</style>
       <h3>{props.location} - {props.names}</h3>
-      <p><em>Submitted {props.formattedWaitTime} ago</em> </p>
+      <p><em>Submitted {props.formattedWaitTime}</em> </p>
     </div>;
   if( props.currentRouterPath === '/admin') {
     return (
